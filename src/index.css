@@ -1,0 +1,82 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+:root {
+  --bg: #F9F9F7;
+  --bg2: #FFFFFF;
+  --text: #0A0A0A;
+  --text2: #555;
+  --border: #E5E5E0;
+  --accent: #2563EB;
+  --card: #FFFFFF;
+  --tag: #F2F2EF;
+  --tagText: #555;
+  --navBg: rgba(249,249,247,0.88);
+}
+[data-theme="dark"] {
+  --bg: #0A0A0A;
+  --bg2: #111111;
+  --text: #F5F5F0;
+  --text2: #888;
+  --border: #222;
+  --accent: #4F8EF7;
+  --card: #141414;
+  --tag: #1A1A1A;
+  --tagText: #888;
+  --navBg: rgba(10,10,10,0.88);
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes typing { from{width:0} to{width:100%} }
+@keyframes blink { 50%{border-color:transparent} }
+@keyframes scaleIn { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
+@keyframes swim { 0%{transform:translateX(-14vw) translateY(0) scaleX(1)} 20%{transform:translateX(20vw) translateY(-32px) scaleX(1)} 42%{transform:translateX(48vw) translateY(18px) scaleX(1)} 50%{transform:translateX(54vw) translateY(18px) scaleX(-1)} 75%{transform:translateX(83vw) translateY(-28px) scaleX(-1)} 100%{transform:translateX(114vw) translateY(12px) scaleX(-1)} }
+@keyframes bubbleRise { from{transform:translateY(30px) scale(.7);opacity:0} 20%{opacity:.6} to{transform:translateY(-100vh) scale(1.2);opacity:0} }
+@keyframes sway { 0%,100%{transform:rotate(-5deg)} 50%{transform:rotate(5deg)} }
+.ocean-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.18;background:radial-gradient(ellipse at 20% 100%,#0b7285 0,transparent 38%),radial-gradient(ellipse at 90% 20%,#2563eb 0,transparent 34%)}
+.ocean-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,47,73,.12));}
+.fish{position:absolute;left:-10vw;font-size:clamp(1.2rem,3vw,2.4rem);filter:saturate(.8);animation:swim 24s linear infinite}
+.fish-one{top:22%;animation-delay:-3s}.fish-two{top:48%;animation-duration:31s;animation-delay:-17s}.fish-three{top:72%;animation-duration:27s;animation-delay:-10s}.fish-four{top:84%;font-size:1.3rem;animation-duration:36s;animation-delay:-24s}
+.bubble{position:absolute;bottom:-20px;width:9px;height:9px;border:1px solid currentColor;border-radius:50%;animation:bubbleRise 12s linear infinite}
+.bubble-1{left:8%;animation-delay:-2s}.bubble-2{left:18%;width:14px;height:14px;animation-delay:-7s}.bubble-3{left:29%;animation-delay:-10s}.bubble-4{left:41%;width:6px;height:6px;animation-delay:-5s}.bubble-5{left:53%;animation-delay:-9s}.bubble-6{left:64%;width:14px;height:14px;animation-delay:-1s}.bubble-7{left:73%;animation-delay:-4s}.bubble-8{left:84%;width:6px;height:6px;animation-delay:-11s}.bubble-9{left:91%;animation-delay:-6s}.bubble-10{left:35%;width:5px;height:5px;animation-delay:-8s}.bubble-11{left:59%;animation-delay:-3s}.bubble-12{left:12%;width:6px;height:6px;animation-delay:-12s}
+.seaweed{position:absolute;bottom:-10px;color:#16a085;font-size:7rem;line-height:1;animation:sway 4s ease-in-out infinite;transform-origin:bottom}
+.seaweed-one{left:8%}.seaweed-two{right:12%;animation-delay:-2s;font-size:5rem}.seaweed-three{left:48%;font-size:4rem;animation-delay:-1s}
+.jellyfish{position:absolute;color:#60a5fa;font-size:3rem;animation:float 6s ease-in-out infinite}.jellyfish-one{left:28%;top:38%;animation-delay:-2s}.jellyfish-two{right:22%;top:68%;font-size:2rem;animation-delay:-4s}
+.water-light{position:absolute;top:-15%;width:22%;height:130%;background:rgba(125,211,252,.16);filter:blur(20px);transform:rotate(18deg);animation:waterDrift 14s ease-in-out infinite}.water-light-one{left:12%}.water-light-two{right:8%;animation-delay:-7s}
+@keyframes waterDrift{0%,100%{transform:rotate(18deg) translateX(-10%);opacity:.2}50%{transform:rotate(24deg) translateX(30%);opacity:.55}}
+.nav-panel{display:flex;align-items:center;gap:.2rem;position:relative;z-index:2}
+.nav-actions{display:flex;align-items:center;gap:.4rem;position:relative;z-index:2}.theme-toggle,.language-toggle{background:var(--tag);border:1px solid var(--border);border-radius:999px;min-width:38px;height:34px;padding:0 10px;cursor:pointer;font-size:.8rem;font-weight:800;color:var(--text);letter-spacing:.04em}.theme-toggle{font-size:1rem}
+.menu-toggle{display:none;background:var(--tag);border:1px solid var(--border);color:var(--text);border-radius:8px;width:38px;height:38px;font-size:1.2rem;cursor:pointer;position:relative;z-index:3}
+.about-photo{width:clamp(180px,20vw,250px);aspect-ratio:1;border:3px solid var(--border);border-radius:50%;overflow:hidden;background:var(--tag);box-shadow:0 18px 45px rgba(0,0,0,.12);animation:float 5s ease-in-out infinite}
+.about-photo img{width:100%;height:100%;display:block;object-fit:cover}
+
+@media (max-width: 700px){
+  .menu-toggle{display:block}
+  .nav-panel{display:none;position:absolute;top:58px;right:5%;left:auto;width:min(230px,calc(100vw - 32px));padding:.65rem;background:var(--navBg);border:1px solid var(--border);border-radius:14px;backdrop-filter:blur(20px);box-shadow:0 18px 45px rgba(0,0,0,.16)}
+  .nav-panel.is-open{display:flex;flex-direction:column;align-items:stretch;gap:.45rem}
+  .nav-panel > div:first-child{display:flex;flex-direction:column;gap:.25rem}
+  .nav-panel > div:first-child button{text-align:left;padding:10px 12px;border-radius:8px}
+  .nav-actions{margin-left:auto;margin-right:.5rem}.nav-panel > button{width:100%}
+  #home{padding-top:94px;min-height:calc(100vh - 40px)}
+  #home > div{grid-template-columns:1fr;gap:2rem}
+  #home > div > div:last-child{display:none}
+  .about-photo{width:min(220px,68vw);margin:0 auto 1rem}
+  h1{letter-spacing:-2px!important}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+}
