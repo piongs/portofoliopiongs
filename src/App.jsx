@@ -607,7 +607,6 @@ export default function App(){
                 transition:'all .25s'}}
                 onMouseEnter={e=>{e.currentTarget.style.borderColor='var(--accent)';e.currentTarget.style.background='var(--bg2)';e.currentTarget.style.transform='translateY(-3px)'}}
                 onMouseLeave={e=>{e.currentTarget.style.borderColor='var(--border)';e.currentTarget.style.background='transparent';e.currentTarget.style.transform='none'}}>
-                <div style={{fontSize:'0.62rem',fontWeight:700,color:'var(--text2)',letterSpacing:'0.1em',marginBottom:'0.5rem'}}>{c.n}</div>
                 <div style={{fontSize:'0.65rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'var(--text2)',marginBottom:'0.4rem'}}>{c.ic} {c.l}</div>
                 <div style={{fontWeight:600,fontSize:'0.9rem',wordBreak:'break-all'}}>{c.v}</div>
               </a>
