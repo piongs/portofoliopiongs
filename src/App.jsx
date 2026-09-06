@@ -35,7 +35,7 @@ const ICONS={
   'Next.js':<svg viewBox="0 0 48 48" width="22" height="22"><circle cx="24" cy="24" r="20" fill="#000"/><path fill="#fff" d="M18 16h4v12l10-12h4L24 32l-6-7v7h-4z"/></svg>,
   'Bootstrap':<svg viewBox="0 0 48 48" width="22" height="22"><rect width="36" height="36" x="6" y="6" rx="6" fill="#7952B3"/><path fill="#fff" d="M16 12h10c4 0 6 2 6 5 0 2-1 3.5-3 4 2.5.5 4 2 4 4.5 0 3.5-2.5 6-7 6H16zm4 8h5c1.5 0 2.5-.8 2.5-2s-1-2-2.5-2h-5zm0 8h5.5c2 0 3-1 3-2.5s-1-2.5-3-2.5H20z"/></svg>,
   'MySQL':<svg viewBox="0 0 48 48" width="22" height="22"><path fill="#00758F" d="M24 4C13 4 4 10 4 20v8c0 10 9 16 20 16s20-6 20-16v-8C44 10 35 4 24 4z"/><ellipse cx="24" cy="20" rx="18" ry="8" fill="#F29111"/><path fill="#00758F" d="M6 20v4c0 4 8 8 18 8s18-4 18-8v-4c0 4-8 8-18 8S6 24 6 20z"/></svg>,
-  'Kriptografi':<svg viewBox="0 0 48 48" width="22" height="22"><rect x="10" y="22" width="28" height="20" rx="3" fill="#FFB300"/><path fill="#E65100" d="M24 10c-5 0-9 4-9 9v3h4v-3c0-3 2-5 5-5s5 2 5 5v3h4v-3c0-5-4-9-9-9z"/><circle cx="24" cy="32" r="3" fill="#E65100"/></svg>,
+  'GitHub':<svg viewBox="0 0 48 48" width="22" height="22"><path fill="currentColor" d="M24 4C12.95 4 4 12.95 4 24c0 8.84 5.73 16.34 13.68 18.98 1 .18 1.37-.43 1.37-.96 0-.48-.02-1.75-.03-3.43-5.57 1.21-6.75-2.69-6.75-2.69-.91-2.31-2.22-2.92-2.22-2.92-1.82-1.24.14-1.22.14-1.22 2.01.14 3.07 2.07 3.07 2.07 1.79 3.07 4.7 2.18 5.85 1.67.18-1.3.7-2.18 1.27-2.68-4.45-.51-9.13-2.22-9.13-9.89 0-2.18.78-3.96 2.06-5.36-.21-.51-.89-2.54.2-5.29 0 0 1.68-.54 5.5 2.05A19.1 19.1 0 0 1 24 11.6c1.7.01 3.4.23 5 .68 3.81-2.59 5.49-2.05 5.49-2.05 1.09 2.75.41 4.78.2 5.29 1.28 1.4 2.06 3.18 2.06 5.36 0 7.69-4.69 9.37-9.15 9.87.72.62 1.36 1.84 1.36 3.71 0 2.68-.02 4.84-.02 5.5 0 .53.36 1.15 1.38.96A20.01 20.01 0 0 0 44 24C44 12.95 35.05 4 24 4z"/></svg>,
   'MS Office':<svg viewBox="0 0 48 48" width="22" height="22"><path fill="#D83B01" d="M28 8H44v32H28z"/><path fill="#ED6C47" d="M4 12l22-4v32L4 36z"/><path fill="#fff" d="M13 20l3 8 3-8h3l-4.5 10L13 20zm-1 0h3v10H12z"/></svg>,
   'SQLite':<svg viewBox="0 0 48 48" width="22" height="22"><path fill="#003B57" d="M36 4c-6 0-10 8-10 18S30 40 36 40s10-8 10-18S42 4 36 4z"/><path fill="#0F80CC" d="M12 8C6 8 4 16 4 24s2 16 8 16c4 0 8-4 8-16V8z"/><path fill="#fff" d="M18 28c-2 4-4 8-6 8-2 0-4-4-4-12s2-12 4-12c2 0 3 2 4 5"/></svg>,
 }
@@ -43,7 +43,7 @@ const ICONS={
 const skills=[
   'HTML & CSS','JavaScript','PHP','Python','Flask',
   'CodeIgniter 3','Laravel 12','Vue.js','React.js','Next.js',
-  'Bootstrap','MySQL','Kriptografi','MS Office',
+  'Bootstrap','MySQL','GitHub','MS Office',
 ]
 
 const projects=[
