@@ -62,9 +62,18 @@ const projects=[
   {num:'05',title:'Website Cafe',full:'Pionk Coffee — Sistem Pemesanan',type:'Web Project',
    desc:'Website pemesanan menu cafe dengan sistem pesan dari meja dan struk digital otomatis. Panel admin untuk kelola menu dan pesanan.',
    tags:['Next.js','React.js','SQLite'],year:'2026',demo:'https://pionk-cofee.vercel.app/',emoji:'☕'},
-  {num:'06',title:'Pionk Futsal',full:'Pionk Futsal — Online Field Booking',type:'Web Project',
-   desc:'Online futsal field booking platform with schedules, venue selection, and a simple reservation flow.',
-   tags:['Laravel 12','PHP','MySQL'],year:'2026',demo:'https://pionkfutsal.freedev.app/',emoji:'⚽'},
+  {num:'06',title:'Pionk Futsal',full:'Pionk Futsal — Sistem Booking Lapangan Futsal Online',type:'Web Project',
+   desc:'Membangun sistem booking lapangan dengan tiga role pengguna (Admin, Staff/Kasir, Member) dan manajemen jadwal untuk mencegah bentrok reservasi. Mengimplementasikan pembayaran transfer manual dan payment gateway Midtrans, membership, poin loyalitas, diskon berdasarkan riwayat transaksi, dashboard pendapatan, CMS blog/promo, moderasi ulasan, serta export laporan ke Excel dan PDF.',
+   tags:['Laravel 12','PHP','MySQL','Tailwind CSS'],year:'2026',demo:'https://pionkfutsal.freedev.app/',demoNote:'Admin: admin@pionkfutsal.test / password · Staff: staff@pionkfutsal.test / password · Member: member@pionkfutsal.test / password',emoji:'⚽'},
+  {num:'07',title:'SIPENDIK',full:'SIPENDIK — Sistem Informasi Pendidikan Pesantren',type:'Web Project',
+   desc:'Membangun sistem manajemen pendidikan pesantren yang mencakup jadwal, absensi, materi harian, dan penilaian santri dengan perhitungan nilai akhir otomatis. Menerapkan role-based access control untuk Admin, Guru, dan Pimpinan dengan Row Level Security pada database, dashboard monitoring, serta laporan evaluasi berbasis periode dengan export PDF dan Excel.',
+   tags:['Next.js','React.js','TypeScript','Supabase','Tailwind CSS'],year:'2026',demo:'https://sipendik-alpha.vercel.app/',demoNote:'Login: admin@sipendik.local / Pesantren2026!',emoji:'📚'},
+  {num:'08',title:'POS Kasir Warung',full:'Aplikasi Web POS Kasir Warung',type:'Web Project',
+   desc:'Membangun aplikasi kasir digital dengan perhitungan total, kembalian, dan pengurangan stok secara otomatis. Mengimplementasikan backend serverless terintegrasi Neon PostgreSQL dan database transaction untuk menjaga konsistensi transaksi, nota digital QR code, autentikasi JWT dan Google OAuth, serta laporan penjualan dan stok dengan export PDF dan Excel.',
+   tags:['React.js','Node.js','Express','PostgreSQL','Vercel'],year:'2026',demo:'https://warungmakmurnyoo.vercel.app/',demoNote:'Login: adminwarung@email.com / password atau login dengan Google',emoji:'🧾'},
+  {num:'09',title:'BMS',full:'BMS — Business Management System',type:'Web Project',
+   desc:'Membangun sistem manajemen operasional dengan modul Karyawan, Inventory, dan Keuangan serta role-based access control. Mengimplementasikan workflow approval cuti dan pengeluaran, database transaction, audit log otomatis, dashboard analitik, serta pengelolaan operasional untuk Admin, Manager, dan Staff.',
+   tags:['Laravel 12','PHP','MySQL','Tailwind CSS'],year:'2026',demo:'https://bisniss09.infinityfreeapp.com/',demoNote:'Admin: admin@bms.test / password · Manager: manager@bms.test / password · Staff: staff@bms.test / password',emoji:'📈'},
 ]
 
 const scrollWords=['WEB DEV','MAHASISWA','BEKASI','OPEN TO WORK','PHP','PYTHON','NEXT.JS','REACT','LARAVEL','VUE.JS']
@@ -75,7 +84,10 @@ const projectEnglish={
   '03':{type:'Academic Project',full:'PDF / DOC / Text Encryption',desc:'Multi-format document encryption web application for PDF, DOC, and text files using DES and the Vigenere Cipher.'},
   '04':{type:'Web Project',full:'Aero Helmets UMKM Website',desc:'Product catalog and ordering website for a local helmet business, with an admin panel for managing products, categories, and orders.'},
   '05':{type:'Web Project',full:'Pionk Coffee Ordering System',desc:'Cafe ordering website with table ordering and automatic digital receipts, plus an admin panel for managing menus and orders.'},
-  '06':{type:'Web Project',full:'Pionk Futsal Online Field Booking',desc:'Online futsal field booking platform with schedules, venue selection, and a simple reservation flow.'},
+  '06':{type:'Web Project',full:'Pionk Futsal — Online Futsal Field Booking System',desc:'Built a field booking system with Admin, Staff/Cashier, and Member roles, schedule management to prevent reservation conflicts, manual transfer and Midtrans payments, membership, loyalty points, transaction-based discounts, revenue dashboards, blog and promo CMS, review moderation, and Excel/PDF report exports.'},
+  '07':{type:'Web Project',full:'SIPENDIK — Islamic Boarding School Education Information System',desc:'Built an education management system covering schedules, attendance, daily materials, and student assessments with automatic final-score calculations. Implemented role-based access for Admin, Teachers, and Leadership with database Row Level Security, monitoring dashboards, and period-based evaluation reports with PDF and Excel exports.'},
+  '08':{type:'Web Project',full:'Warung POS Cashier Web App',desc:'Built a digital cashier application with automatic totals, change calculation, and stock deduction. Implemented a serverless backend with Neon PostgreSQL transactions, QR-code digital receipts, JWT and Google OAuth authentication, and sales and stock reports with PDF and Excel exports.'},
+  '09':{type:'Web Project',full:'BMS — Business Management System',desc:'Built an operational management system with Employee, Inventory, and Finance modules and role-based access control. Implemented leave and expense approval workflows, database transactions, automatic audit logs, analytics dashboards, and operational management for Admin, Manager, and Staff roles.'},
 }
 
 function OceanBackground(){
