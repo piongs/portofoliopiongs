@@ -323,7 +323,7 @@ export default function App(){
               </button>
             </div>
             <div style={{animation:'fadeUp .8s ease .5s both',display:'flex',gap:'2.5rem',flexWrap:'wrap'}}>
-              {[['6',lang==='en'?'Projects':'Proyek'],['7','Semester'],['4',lang==='en'?'Languages':'Bahasa'],['2026',lang==='en'?'Class':'Angkatan']].map(([n,l])=>(
+              {[['6',lang==='en'?'Projects':'Proyek'],['7','Semester'],['4',lang==='en'?'Languages':'Bahasa']].map(([n,l])=>(
                 <div key={l}>
                   <div style={{fontFamily:"'Plus Jakarta Sans',sans-serif",fontSize:'clamp(1.5rem,3vw,2.2rem)',fontWeight:800,letterSpacing:'-1px'}}>{n}+</div>
                   <div style={{fontSize:'0.72rem',color:'var(--text2)',marginTop:'2px',textTransform:'uppercase',letterSpacing:'0.06em'}}>{l}</div>
@@ -344,19 +344,6 @@ export default function App(){
           </div>
         </div>
       </section>
-
-      {/* MARQUEE */}
-      <div style={{borderTop:'1px solid var(--border)',borderBottom:'1px solid var(--border)',
-        padding:'13px 0',overflow:'hidden',background:'var(--bg)'}}>
-        <div style={{display:'flex',gap:'2rem',animation:'marquee 20s linear infinite',width:'max-content'}}>
-          {[...scrollWords,...scrollWords,...scrollWords].map((w,i)=>(
-            <span key={i} style={{fontSize:'0.68rem',fontWeight:700,letterSpacing:'0.15em',
-              color:'var(--text2)',whiteSpace:'nowrap',display:'flex',alignItems:'center',gap:'2rem'}}>
-              {w}<span style={{color:'var(--accent)'}}>✦</span>
-            </span>
-          ))}
-        </div>
-      </div>
 
       {/* ABOUT */}
       <section id="about" style={{padding:'100px 5%',maxWidth:'1200px',margin:'0 auto'}}>
