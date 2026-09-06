@@ -280,7 +280,7 @@ export default function App(){
             </div>
             <div style={{animation:'fadeUp .8s ease .3s both',marginBottom:'2rem'}}>
               <p style={{fontSize:'0.95rem',color:'var(--text2)',maxWidth:'440px',lineHeight:1.8}}>
-                {lang==='en'?'Sixth-semester Informatics student at Bina Insani University, Bekasi. Passionate about building functional and easy-to-use websites.':'Mahasiswa Semester 6 Teknik Informatika di Universitas Bina Insani Bekasi. Tertarik membangun website yang fungsional dan mudah digunakan.'}
+                {lang==='en'?'Seventh-semester Informatics student focused on developing websites and web-based applications. Experienced through personal and academic projects using React.js, Next.js, Laravel, PHP, Node.js, and various databases.':'Mahasiswa Teknik Informatika Semester 7 yang berfokus pada pengembangan website dan aplikasi berbasis web. Memiliki pengalaman melalui proyek pribadi dan akademik menggunakan React.js, Next.js, Laravel, PHP, Node.js, dan berbagai database.'}
               </p>
             </div>
             <div style={{animation:'fadeUp .8s ease .4s both',display:'flex',gap:'0.8rem',flexWrap:'wrap',marginBottom:'3rem'}}>
@@ -311,7 +311,7 @@ export default function App(){
               </button>
             </div>
             <div style={{animation:'fadeUp .8s ease .5s both',display:'flex',gap:'2.5rem',flexWrap:'wrap'}}>
-              {[['6',lang==='en'?'Projects':'Proyek'],['6','Semester'],['4',lang==='en'?'Languages':'Bahasa'],['2026',lang==='en'?'Class':'Angkatan']].map(([n,l])=>(
+              {[['6',lang==='en'?'Projects':'Proyek'],['7','Semester'],['4',lang==='en'?'Languages':'Bahasa'],['2026',lang==='en'?'Class':'Angkatan']].map(([n,l])=>(
                 <div key={l}>
                   <div style={{fontFamily:"'Plus Jakarta Sans',sans-serif",fontSize:'clamp(1.5rem,3vw,2.2rem)',fontWeight:800,letterSpacing:'-1px'}}>{n}+</div>
                   <div style={{fontSize:'0.72rem',color:'var(--text2)',marginTop:'2px',textTransform:'uppercase',letterSpacing:'0.06em'}}>{l}</div>
@@ -356,13 +356,13 @@ export default function App(){
             </h2>
             <div style={{display:'flex',flexDirection:'column',gap:'1rem',color:'var(--text2)',fontSize:'0.93rem',lineHeight:1.85}}>
               {lang==='en'?<>
-                <p>I am a sixth-semester Informatics student at Bina Insani University, Bekasi, with an interest in web and web application development.</p>
-                <p>I am expanding my skills through a campus Mandarin program with a Taiwanese institution and learning Arabic.</p>
-                <p>I am currently looking for an internship to gain real-world experience.</p>
+                <p>I am an Informatics student at Bina Insani University, Bekasi, focused on developing websites and web-based applications.</p>
+                <p>I have experience building personal and academic projects using React.js, Next.js, Laravel, PHP, Node.js, and various relational databases. I am familiar with authentication, data management, admin dashboards, API integration, and databases.</p>
+                <p>Through the projects I have worked on, I continue to grow as a Web Developer and learn new technologies. I am currently looking for an internship to gain professional experience and contribute to product development.</p>
               </>:<>
-                <p>Saya mahasiswa Teknik Informatika semester 6 di Universitas Bina Insani, Bekasi, dengan minat pada pengembangan web dan aplikasi berbasis web.</p>
-                <p>Saya memperluas kemampuan melalui program bahasa Mandarin kerja sama kampus dengan institusi Taiwan dan sedang mempelajari bahasa Arab.</p>
-                <p>Saat ini saya mencari kesempatan magang untuk mendapatkan pengalaman nyata di dunia kerja.</p>
+                <p>Saya adalah mahasiswa Teknik Informatika Universitas Bina Insani, Bekasi, yang memiliki minat dan fokus dalam pengembangan website dan aplikasi berbasis web.</p>
+                <p>Saya memiliki pengalaman mengembangkan berbagai proyek pribadi dan akademik menggunakan teknologi seperti React.js, Next.js, Laravel, PHP, Node.js, serta database relasional. Saya terbiasa membangun aplikasi dengan fitur autentikasi, manajemen data, dashboard admin, integrasi API, dan database.</p>
+                <p>Melalui berbagai proyek yang telah saya kerjakan, saya terus mengembangkan kemampuan sebagai Web Developer dan berkomitmen untuk mempelajari teknologi baru. Saat ini, saya sedang mencari kesempatan magang untuk mendapatkan pengalaman profesional dan berkontribusi dalam pengembangan produk di dunia kerja.</p>
               </>}
             </div>
             <a href="/CV_M_Sopian.pdf" target="_blank" rel="noreferrer"
@@ -385,7 +385,7 @@ export default function App(){
               {[
                 [lang==='en'?'Location':'Lokasi',lang==='en'?'Bekasi, West Java':'Bekasi, Jawa Barat'],
                 [lang==='en'?'University':'Universitas',lang==='en'?'Bina Insani University':'Universitas Bina Insani'],
-                [lang==='en'?'Major':'Jurusan',lang==='en'?'BSc Informatics — Semester 6':'S1 Teknik Informatika — Semester 6'],
+                [lang==='en'?'Major':'Jurusan',lang==='en'?'BSc Informatics — Semester 7':'S1 Teknik Informatika — Semester 7'],
                 ['Email','sopianibnurifai@gmail.com'],
                 [lang==='en'?'Phone':'Telepon','085710446746'],
                 ['Status',lang==='en'?'Open to Internship':'Terbuka untuk Magang'],
@@ -427,15 +427,15 @@ export default function App(){
             {skills.map((s,i)=>(
               <Anim key={s} delay={i*0.04}>
                 <div onMouseEnter={()=>setHoverSkill(i)} onMouseLeave={()=>setHoverSkill(null)}
-                  style={{background:hoverSkill===i?'var(--text)':'var(--bg)',
-                    color:hoverSkill===i?'var(--bg)':'var(--text)',
+                  style={{background:hoverSkill===i?'var(--skillActive)':'var(--bg)',
+                    color:hoverSkill===i?'#fff':'var(--text)',
                     border:'1px solid var(--border)',borderRadius:'10px',
                     padding:'0.85rem 0.6rem',fontSize:'0.78rem',fontWeight:600,textAlign:'center',
                     cursor:'default',transition:'all .25s',
                     transform:hoverSkill===i?'translateY(-4px)':'none',
                     boxShadow:hoverSkill===i?'0 10px 25px rgba(0,0,0,0.12)':'none',
                     display:'flex',flexDirection:'column',alignItems:'center',gap:'7px'}}>
-                  <span style={{filter:hoverSkill===i?'brightness(0) invert(1)':'none',transition:'filter .25s'}}>
+                  <span style={{display:'inline-flex',transition:'transform .25s',transform:hoverSkill===i?'scale(1.08)':'none'}}>
                     {ICONS[s]||<span style={{fontSize:'1.2rem'}}>⚙️</span>}
                   </span>
                   <span>{s}</span>
@@ -533,7 +533,7 @@ export default function App(){
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'4rem'}}>
             <div>
               {[
-                {t:lang==='en'?'Bina Insani University':'Universitas Bina Insani',s:lang==='en'?'BSc Informatics — Semester 6 · Bekasi':'S1 Teknik Informatika — Semester 6 · Bekasi',y:lang==='en'?'2023–Present':'2023–Sekarang'},
+                {t:lang==='en'?'Bina Insani University':'Universitas Bina Insani',s:lang==='en'?'BSc Informatics — Semester 7 · Bekasi':'S1 Teknik Informatika — Semester 7 · Bekasi',y:lang==='en'?'2023–Present':'2023–Sekarang'},
                 {t:lang==='en'?'Mandarin Language Program':'Program Bahasa Mandarin',s:lang==='en'?'Participant · Partnership with a Taiwanese institution':'Peserta · Kerja sama dengan institusi Taiwan',y:'Jan–Jun 2026'},
                 {t:lang==='en'?'English Club':'UKM Bahasa Inggris',s:lang==='en'?'Member · Bina Insani University':'Anggota · Universitas Bina Insani',y:'2024'},
               ].map((a,i)=>(
