@@ -84,7 +84,7 @@ body {
   #about{margin-top:clamp(3.5rem,12vw,5rem)!important;padding-top:clamp(2rem,6vw,3.5rem)!important}
   .about-grid{display:flex!important;flex-direction:column;gap:2rem!important}
   .about-grid > div:first-child{order:1}
-  .about-photo-column{order:2}
+  .about-photo-column{order:2;width:100%;justify-content:center!important}
   .about-details-column{order:3}
   #home > div{grid-template-columns:1fr;gap:2rem}
   #home > div > div:last-child{display:none}
