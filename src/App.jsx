@@ -346,7 +346,7 @@ export default function App(){
       </section>
 
       {/* ABOUT */}
-      <section id="about" style={{padding:'100px 5%',maxWidth:'1200px',margin:'0 auto'}}>
+      <section id="about" className="about-section" style={{padding:'100px 5%',maxWidth:'1200px',margin:'0 auto'}}>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'5rem',alignItems:'start'}}>
           <Anim dir='left'>
             <div style={{fontSize:'0.68rem',fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--text2)',marginBottom:'1.2rem'}}>{lang==='en'?'About Me':'Tentang Saya'}</div>

@@ -64,6 +64,11 @@ body {
 .menu-toggle{display:none;background:var(--tag);border:1px solid var(--border);color:var(--text);border-radius:8px;width:38px;height:38px;font-size:1.2rem;cursor:pointer;position:relative;z-index:3}
 .about-photo{width:clamp(180px,20vw,250px);aspect-ratio:1;border:3px solid var(--border);border-radius:50%;overflow:hidden;background:var(--tag);box-shadow:0 18px 45px rgba(0,0,0,.12);animation:float 5s ease-in-out infinite}
 .about-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.about-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:border-color .4s ease}
+
+@media (min-width: 701px){
+  .about-section .about-photo{display:none}
+}
 
 @media (max-width: 700px){
   .menu-toggle{display:block}
