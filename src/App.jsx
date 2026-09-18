@@ -10,11 +10,11 @@ function useInView(threshold=0.1){
   return[ref,v]
 }
 
-function Anim({children,delay=0,dir='up',style={}}){
+function Anim({children,delay=0,dir='up',style={},className=''}){
   const[ref,v]=useInView()
   const t=dir==='up'?'translateY(40px)':dir==='left'?'translateX(-40px)':'translateX(40px)'
   return(
-    <div ref={ref} style={{opacity:v?1:0,transform:v?'none':t,
+    <div ref={ref} className={className} style={{opacity:v?1:0,transform:v?'none':t,
       transition:`opacity .7s ease ${delay}s, transform .7s ease ${delay}s`,...style}}>
       {children}
     </div>
@@ -337,8 +337,8 @@ export default function App(){
 
       {/* ABOUT */}
       <section id="about" className="about-section" style={{padding:'100px 5%',maxWidth:'1200px',margin:'0 auto'}}>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'5rem',alignItems:'start'}}>
-          <Anim dir='left'>
+        <div className="about-grid" style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'5rem',alignItems:'start'}}>
+          <Anim dir='left' style={{gridColumn:'span 2'}}>
             <div style={{fontSize:'0.68rem',fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--text2)',marginBottom:'1.2rem'}}>{lang==='en'?'About Me':'Tentang Saya'}</div>
             <h2 style={{fontFamily:"'Plus Jakarta Sans',sans-serif",fontSize:'clamp(2rem,4vw,3rem)',fontWeight:800,letterSpacing:'-1.5px',lineHeight:1.1,marginBottom:'1.5rem'}}>
               {lang==='en'?<>Who<br/><span style={{color:'var(--accent)'}}>am I?</span></>:<>Siapa<br/><span style={{color:'var(--accent)'}}>saya?</span></>}
@@ -364,12 +364,12 @@ export default function App(){
               📄 {lang==='en'?'View CV':'Lihat CV'}
             </a>
           </Anim>
-          <Anim dir='right' delay={0.1} style={{display:'flex',justifyContent:'center',alignItems:'flex-start'}}>
+          <Anim dir='right' delay={0.1} className="about-photo-column" style={{display:'flex',justifyContent:'center',alignItems:'flex-start'}}>
             <div className="about-photo">
               <img src="/foto.jpg" alt="M. Sopian" />
             </div>
           </Anim>
-          <Anim dir='right' delay={0.2}>
+          <Anim dir='right' delay={0.2} className="about-details-column">
             <div style={{display:'flex',flexDirection:'column',gap:'1px'}}>
               {[
                 [lang==='en'?'Location':'Lokasi',lang==='en'?'Bekasi, West Java':'Bekasi, Jawa Barat'],

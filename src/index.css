@@ -67,7 +67,10 @@ body {
 .about-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:border-color .4s ease}
 
 @media (min-width: 701px){
-  .about-section .about-photo{display:none}
+  .about-grid{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr)!important;gap:clamp(3rem,7vw,7rem)!important}
+  .about-grid > div:first-child{grid-column:auto!important}
+  .about-photo-column{display:none!important}
+  .about-details-column{grid-column:2}
 }
 
 @media (max-width: 700px){
@@ -79,6 +82,10 @@ body {
   .nav-actions{margin-left:auto;margin-right:.5rem}.nav-panel > button{width:100%}
   #home{padding-top:94px!important;padding-bottom:0!important;min-height:auto!important}
   #about{padding-top:0!important}
+  .about-grid{display:flex!important;flex-direction:column;gap:2rem!important}
+  .about-grid > div:first-child{order:1}
+  .about-photo-column{order:2}
+  .about-details-column{order:3}
   #home > div{grid-template-columns:1fr;gap:2rem}
   #home > div > div:last-child{display:none}
   .about-photo{width:min(220px,68vw);margin:0 auto 1rem}
