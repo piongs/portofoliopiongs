@@ -80,7 +80,7 @@ body {
   .nav-panel > div:first-child{display:flex;flex-direction:column;gap:.25rem}
   .nav-panel > div:first-child button{text-align:left;padding:10px 12px;border-radius:8px}
   .nav-actions{margin-left:auto;margin-right:.5rem}.nav-panel > button{width:100%}
-  #home{padding-top:94px!important;padding-bottom:0!important;min-height:auto!important}
+  #home{padding-top:94px!important;padding-bottom:3rem!important;min-height:100svh!important}
   #about{margin-top:clamp(3.5rem,12vw,5rem)!important;padding-top:clamp(2rem,6vw,3.5rem)!important}
   .about-grid{display:flex!important;flex-direction:column;gap:2rem!important}
   .about-grid > div:first-child{order:1}
