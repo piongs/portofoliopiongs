@@ -266,16 +266,6 @@ export default function App(){
         padding:'100px 5% 60px',maxWidth:'1200px',margin:'0 auto'}}>
         <div style={{width:'100%',display:'grid',gridTemplateColumns:'1fr auto',gap:'3rem',alignItems:'center'}}>
           <div>
-            <div style={{animation:'fadeUp .8s ease both'}}>
-              <div style={{display:'inline-flex',alignItems:'center',gap:'8px',
-                background:'var(--tag)',border:'1px solid var(--border)',
-                fontSize:'0.72rem',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',
-                padding:'6px 14px',borderRadius:'999px',marginBottom:'1.5rem',color:'var(--text2)'}}>
-                <span style={{width:'7px',height:'7px',borderRadius:'50%',background:'#22C55E',
-                  animation:'pulse 2s infinite',display:'inline-block'}}/>
-                {lang==='en'?'OPEN TO INTERNSHIP • SEPTEMBER 2026':'MENCARI MAGANG • AGUSTUS 2026'}
-              </div>
-            </div>
             <div style={{animation:'fadeUp .8s ease .1s both'}}>
               <h1 style={{fontFamily:"'Plus Jakarta Sans',sans-serif",
                 fontSize:'clamp(2.8rem,7vw,6rem)',fontWeight:800,lineHeight:1.0,
@@ -333,7 +323,7 @@ export default function App(){
           </div>
           {/* Photo */}
           <div style={{animation:'fadeIn 1s ease .3s both',flexShrink:0}}>
-            <div style={{width:'clamp(190px,24vw,280px)',height:'clamp(190px,24vw,280px)',borderRadius:'50%',
+            <div style={{width:'clamp(220px,30vw,360px)',height:'clamp(220px,30vw,360px)',borderRadius:'50%',
               border:'3px solid var(--border)',overflow:'hidden',
               background:'linear-gradient(135deg,#EFF6FF,#F0FDF4)',
               display:'flex',alignItems:'center',justifyContent:'center',
